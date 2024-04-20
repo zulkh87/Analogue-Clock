@@ -1,0 +1,36 @@
+Merhaba! BU video'da size günbatımı temalı bir duvar saatini
+HTML , CSS , JavaScript kullanarak nasıl yapacağınızı göstermeye çalışacağım.
+
+Gerekli kaynakları yorum satırlarına bırakmaya özen göstereceğim.
+
+Öncelikle projenin son halini görelim?
+
+Tüm ekranlarda bozulmadan görülebiliyor.
+
+Siz de yapabilirsiniz.
+
+Hadi başlayalım.
+
+Music by youtube.com/@FantasyLofi → https://ffm.bio/bitsandhits
+
+Öncelikle çalan müzik kanalı yukarıda belirtilmiştir.
+
+https://code.visualstudio.com/download
+
+Bu linkden VisualStudio Code indirmeniz gereklidir. Yeni başlayanlara bir çok özellik sunar ve tüm major işletim sistemlerinde çalışır.
+
+Live server eklentisini yüklemelisiniz, işimizi çok kolaylaştıracak.
+Name: Live Server
+Id: ritwickdey.LiveServer
+Description: Launch a development local Server with live reload feature for static & dynamic pages
+Version: 5.7.9
+Publisher: Ritwick Dey
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+
+Prettier da çok faydalı oluyor, yüklemeniz sizi baya bir zahmetten kurtarır.
+Name: Prettier - Code formatter
+Id: esbenp.prettier-vscode
+Description: Code formatter using prettier
+Version: 10.4.0
+Publisher: Prettier
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode

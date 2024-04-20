@@ -1,0 +1,157 @@
+/* Tüm browser'larda (chrome, firefox, safari, brave ...)  */
+/* Varsayılan bazı stil özellikleri vardır. */
+/* Bunları sıfırlayalım. */
+
+
+/* yıldız işareti sayfadaki tüm elementleri seçer. before ve after şu an bilmeniz gereke bir konu değil. */
+
+*, *::after, *::before {
+    /* bir kutunun (herşey kutu :) boyutunu verdiğimiz değere eşitler ve bizi birçok hesaplama fonksiyonu yazmaktan kurtatır */
+    box-sizing: border-box;
+}
+
+/* Bunu nerede görmüştük? ctrl'ye basılı tutarken sol mouse click yapalım (tıklayalım) */
+/* Neyse :) */
+body{
+        /*
+    * Created with https://www.css-gradient.com
+    * Gradient link: https://www.css-gradient.com/?c1=ffb901&c2=ff5701&gt=r&gd=dcc
+    */
+        /* Bu kodu açıklamayacağım, yukarıdaki linklerden kendi renk geçişlerinizi oluşturabilirsiniz. */
+    background: radial-gradient(at center, #FFB901, #FF5701);;
+    /* Flexbox başlı başına bir konu, öğrenmek isterseniz kaynak paylaşacağım bir yerlerde */
+    display: flex;
+    /* ana düzlemde (okulda öğretilen x ekseni) ve karşıt düzlemde (y ekseni) merkeze hizaladık alttaki iki kod satırında. */
+    justify-content: center;
+    align-items: center;
+    /* Sayfamız her zaman görünen kısmın tamamını baz alsın */
+    min-height: 100vh;
+    /* Eğer bir dışarı taşma olursa gözükmesin. */
+    overflow: hidden;
+}
+
+/* verdiğimiz class'ları seçmek için önlerine nokta (.) koymalıyız. */
+.clock{
+    /* genişlik belirttik */
+    width: 300px;
+    /* yükseklik belirttik */
+    height: 300px;
+    /* arka plan rengi belirttik. İngilizce bir renk ismi de yazabilirdik ama bunu öğrenmeniz daha güzel olur */
+    background-color: rgba(255,255,255, .8);
+    /* Hani her şey bir kutu demiştim ya, köşelere %50 eğim vererek bir daire haline getirdik */
+    border-radius: 50%;
+    /* Burada kenar için stillendirme özellikleri belirttik. 10px boyutunda, düz çüzgide, goldenrod renginde olmasını istedik */
+    border: 10px solid #977316;
+    /* Eğer yazılım öğrenmeye karar verirseniz bu çok başınızı ağrıtma potansiyeli olan bir konu, "konumlandırma". Çok açıklama yapmayacağım ama link bırakırım. */
+    position: relative;
+}
+
+/* Genel saat (clock) sınfımız için stillendirmelerimiz bu kadar. Bakalım ne yaptık? */
+
+/* Biraz daha yolumuz var :) */
+
+/* hem clock hem de number sınıfına sahip olan her elementi seçtik. */
+.clock .number {
+    /* rotation adında bir değişken tanımladık. Şimdilik dursun böyle. */
+    --rotation: 0;
+    /* konumlandırma anlatmayı düşünmüyorum bu videoda, ama şimdilik kodu yazmanız yeterli */
+    position: absolute;
+    /* Çocuğu olduğu elementin (aklıma başka bir anlatım gelmedi) */
+    /* genişliğinin ve yüksekliğinin %100'ünü kaplamasını yazdık */
+    width: 100%;
+    height: 100%;
+    /* metinleri ortaladık (word'de de vardı bu, kullanmışlarınız hatırlayabilir */
+    text-align: center;
+    /* Geldik buralara kadar, pes etmek yok. */
+    /* Bir dönüşüm yapacağımızı belirttik transform: diyerek */
+    /* rotate (döndür) özelliğini kullanacağımızı belirttik */
+    /* rotation değişkenini yeniden tanımlamadık! sadece değişkene referens verebilmek için var(--rota...) yazım kuralını kullandık */
+    transform: rotate(var(--rotation));
+    /* tüm metinlerin boyunutu 1.5 rem (root element => 16px)'e ayarladık. 24 px sonuçta. */
+    font-size: 1.5rem;
+}
+
+/* Bu bölümü yazıp anlatacağım */
+
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+/* .clock .number12 { --rotation: 360deg; } */
+/* Saatimizin belirli sayılarda belirli derecelerde durması gerekiyor. */
+/* Bir dairenin 360 derece olduğunu hatırlayalım. Yukarıdaki kodu anlamamız kolaylaşacaktır. */
+
+/* gördüğünüz üzere rakamlarımız yerli yerinde. */
+
+/* Burada hem "saat" hem de "saat belirteci" sınıflarına sahip olan elementleri seçtik */
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    /* aşağıdan, toplam uzunluğun %50'si kadar konumlan. */
+    bottom: 50%;
+    /* soldan, toplam genişliğin %50'si kadar konumlan. */
+    left: 50%;
+    /* #fff saf beyaz renge tekabül eder. */
+    border: 1px solid #fff;
+    /* yukarıdaki köşelerin solda olanına 10px eğim ver */
+    border-top-left-radius: 10px;
+    /* yukarıdaki köşelerin sağda olanına 10px eğim ver */
+    border-top-right-radius: 10px;
+    /* dönüşümü dipten başlat Yine bir link koyacağım bununla ilgili. */
+    transform-origin: bottom;
+    /* Photoshop gibi program kullanmış olanlar z-index'i bilebilirler. Basitçe, layer yani düzlem sırasını belirtiyoruz */
+    z-index: 10;
+    /* Stillendirmemizin ana hareketleri bu kod ile hesaplanacak */
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+/* Şu an üzerinde durmamanızı rica edeceğim, pseudo element'ler yeni başlayanlar için karışık gelebilir. */
+.clock::after {
+    /* clearfix diye bir hikaye var, onu geçelim ama burada içeriğin boş olmasını belirttik */
+    content: "";
+    position: absolute;
+    background-color: #977316;
+    /* .clock .hand seçicimizin z-index'inden 1 büyük, demekki üstte görünecek */
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    /* bu kod tam ortalama için. İsterseniz araştırabilirsiniz. */
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+/* Yine bir Css cümbüşü :) */
+/* .clock sınıfına sahip olan element'e bak sonra orada .hand ve .second sınıflarına ait olan element(leri)i seç */
+.clock .hand.second{
+    width: 3px;
+    height: 45%;
+    background-color: rgb(105,0,0);
+}
+
+.clock .hand.minute {
+    width: 7px;
+    height: 40%;
+    /* bu renkleri bulmak için baya bir zaman harcadığımı ve tasarımcı olmadığımı söylemiş miydim? :D */
+    background-color: #00a86b;
+}
+
+.clock .hand.hour {
+    width: 10px;
+    height: 35%;
+    background-color: #010f0e;
+}
+
+/* Şu an 3 saat göstergeç(?)leri de aynı yerde duruyor. Şimdi gerekli mekanizmayı kuralım. Ama önce bir şey yapmalıyız.
+
+HTML'e geri dönüş versiyon 234729827...
+*/
+
+/* Çok kalabalık olduğu için buraya yazıyorum. data attribute'ları bize elementleri seçmemizde yardımcı olacak. Biraz orta düzey konusu, o yüzden şimdilik sorgulamayalım fazla. Aslında yaptığı pek bir şey yok, birazdan göreceğiz. */

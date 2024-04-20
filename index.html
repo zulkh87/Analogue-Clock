@@ -1,0 +1,51 @@
+<!-- Boilerplate'imizi oluşturalım. Ünlem işareti yapın. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Gerekli harf takımının belirtilmesi için meta tag'i -->
+    <meta charset="UTF-8">
+    <!-- Responsive özellik için gerekli meta tag'i -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Saatimizin browser'daki başlığı bu olacak. -->
+    <title>Günbatımı Temalı Saat</title>
+    <!-- Peki bu oluşturduğumuz css sayfası ile HTML kodlarımız nasıl iletişim kuracak? Tam olarak şöyle. -->
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+
+    <!-- Yukarıda Javascript programlama dilimizin bulunacağı kod dosyamızı HTML sayfamız ile bağladık. -->
+
+    <!-- defer derken de sayfa tamamen yüklendikten sonra işleme alınması komutunu verdik -->
+
+
+</head>
+<!-- Sayfamızda görünecek tüm HTML kodumuzu BODY tagleri içine yazarız. -->
+<!-- Body => Vücut -->
+<body>
+    <!-- bir container div oluşturduk. Sayfaya gireceğimiz kodlarımızı kısmi bir division / divider (bölüm) içine aldık -->
+    <!-- clock adlı bir class verdik. Syntax (yazım kuralları çok önemli, dikkatli olun) -->
+    <div class="clock">
+        <!-- yelkovan için bir div daha açtık. -->
+        <div class="hand hour" data-hour-hand></div>
+        <!-- akrep için de bir div açtık -->
+        <!-- Class'lar arasında boşluk var! Dikkat edin -->
+        <div class="hand minute" data-hour-minute></div>
+        <!--  -->
+        <!-- Saniyeyi gösterecek çubuk için ayrı bir div açtık. -->
+        <div class="hand second" data-hour-second></div>
+        <!-- Şimdi saate yerleştireceğimiz numaralarımız için birer div açalım ve değer girelim. -->
+        <div class="number number1">1</div>
+        <div class="number number2">2</div>
+        <div class="number number3">3</div>
+        <div class="number number4">4</div>
+        <div class="number number5">5</div>
+        <div class="number number6">6</div>
+        <div class="number number7">7</div>
+        <div class="number number8">8</div>
+        <div class="number number9">9</div>
+        <div class="number number10">10</div>
+        <div class="number number11">11</div>
+        <div class="number number12">12</div>
+    </div> 
+</body>
+</html>

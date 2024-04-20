@@ -34,3 +34,20 @@ Description: Code formatter using prettier
 Version: 10.4.0
 Publisher: Prettier
 VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
+
+
+
+Jacascript kodları karışık oldu o yüzden buradayız.
+
+yazdığım fonksiyonları çağırmayı unutmuşum.
+
+Emin olun başınıza böyle şeylerin erkenden gelmesi sizin için çok iyi.
+
+Yoksa deneyimli bir yazılımcı bu tür hatalar ile karşılaşmış olmak zorunda zaten.
+
+
+Tekrar bakalım?
+
+Umarım beğenmişsinizdir. İsterseniz renklerle oynayın, bir de sizin tasarımınızı görelim.
+

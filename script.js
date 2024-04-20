@@ -10,6 +10,8 @@ const minuteHand = document.querySelector("[data-minute-hand]");
 const secondHand = document.querySelector("[data-second-hand]");
 // querySelector ile bir seçim yapacağımı belirttim.
 
+// Evet şimdi JavaScript eksiğimizi tamamlayalım!
+
 // Anlamadıysanız sorun değil, devam!
 // Akıl sağlığınızı korumak istiyorsanız yukarıdaki kodu doğru yazın.
 // Akıl sağlığınızı korumak istiyorsanız yukarıdaki kodu doğru yazın.
@@ -18,6 +20,7 @@ const secondHand = document.querySelector("[data-second-hand]");
 // Ana fonksiyon
 
 function setClock() {
+    // SET CLOCK FONKSİYON TANIMLAMASININ İÇİNDEYİM.
     // sistemden şu anki zamanı alalım.
     const currentDate = new Date();
     // saniyeleri bir değişkene atadık
@@ -27,6 +30,13 @@ function setClock() {
     // aynı şeyi saatler için yaptık.
     const hoursRatio = (minutesRatio + currentDate.getHours()) / 12;
     // peki niye topladık? Bunu siz düşünün bakalım.
+
+    setRotation(secondHand, secondsRatio);
+    setRotation(minuteHand, minutesRatio);
+    setRotation(hourHand, hoursRatio);
+
+    // bir ara daha gelebilir...
+    // tamamdır!
 }
 
 // bu fonksiyonu kısmen anlatacağım.
